@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- <link rel="stylesheet" href="../css/all.min.css" /> -->
+    <link rel="stylesheet" href="../css/style.css" />
+    <script defer src="./assets/js/all.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css"
+    />
+    <script src="https://code.iconify.design/2/2.0.4/iconify.min.js"></script>
+    <script src="./assets/js/repo-card.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <!-- Animation -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <title>My Portfollio</title>
+  </head>
+  <body>
+    <!-- Progress Bar -->
+    <div id="progress">
+      <span id="progress-value"></span>
+    </div>
+
+    <section>
+      <div class="container">
+        <div id="top" class="page-scroll"></div>
+        <header>
+          <a href="#top" class="logo">Aaditya</a>
+          <ul>
+            <li><a class="active page" href="#top" id="home-btn">Home</a></li>
+            <li><a href="#about" class="page" id="about-btn">About Me</a></li>
+            <li>
+              <a href="#experience" class="page" id="experience-btn"
+                >Experience</a
+              >
+            </li>
+            <li>
+              <a href="#projects" class="page" id="project-btn">Projects</a>
+            </li>
+            <li>
+              <a href="#contact" class="enabledisable page" id="contact-btn"
+                >Contact</a
+              >
+            </li>
+          </ul>
+        </header>
+        <!-- Main Content -->
+        <div class="content">
+          <div class="column">
+            <h2 >
+              Hi all, I'm Aaditya <span class="wave">👋</span>
+            </h2>
+            <p >
+              I love software development, Web developing. I
+              know a little bit of React! Want to discuss
+              regarding any project or just want to say a Hi? I am always
+              available to listen you :)
+            </p>
+            <a href="#home"  data-aos-duration="1000"
+              >Contact Me</a
+            >
+            <a href="#home"  data-aos-duration="1000"
+              >Resume</a
+            >
+          </div>
+          <div class="img">
+            <img
+              src="../images/coder.gif"
+              alt="APS-OCTOCAT"
+        
+            />
+          </div>
+        </div>
+        <!-- 2nd Section -->
+        <div
+          id="about"
+          class="content page-scroll"
+          style="justify-content: space-around"
+        >
+          
+          <div class="column-2">
+            <svg
+              xmlns="//www.w3.org/2000/svg"
+              version="1.1"
+              class="svg-filters"
+              style="display: none"
+            >
+              <defs>
+                <filter id="marker-shape">
+                  <feTurbulence
+                    type="fractalNoise"
+                    baseFrequency="0 0.15"
+                    numOctaves="1"
+                    result="warp"
+                  />
+                  <feDisplacementMap
+                    xChannelSelector="R"
+                    yChannelSelector="G"
+                    scale="30"
+                    in="SourceGraphic"
+                    in2="warp"
+                  />
+                </filter>
+              </defs>
+            </svg>
+            <h2 style="font-weight: 550">
+              <span class="low-highlight-pink">What I do</span>
+            </h2>
+            <h3 style="font-size: 24px; color: #444444; font-weight: 1">
+              I love all aspects of technology and want to explore as much as I
+              can!
+            </h3>
+            <div class="dev-icons">
+              <ul>
+                <li class="software-skill-inline html5">
+                  <i class="devicon-html5-plain"></i>
+                  <p>HTML5</p>
+                </li>
+                <li class="software-skill-inline css3">
+                  <i class="devicon-css3-plain"></i>
+                  <p>CSS3</p>
+                </li>
+                <li class="software-skill-inline javascript">
+                  <i class="devicon-javascript-plain"></i>
+                  <p>JavaScript</p>
+                </li>
+                <li class="software-skill-inline python">
+                  <i class="devicon-python-plain"></i>
+                  <p>Python</p>
+                </li>
+                <li class="software-skill-inline flask">
+                  <i class="devicon-flask-plain"></i>
+                  <p>Flask</p>
+                </li>
+                <li class="software-skill-inline linux">
+                  <i class="devicon-linux-plain"></i>
+                  <p>Linux</p>
+                </li>
+              </ul>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>

@@ -1,0 +1,508 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap");
+
+html {
+  scroll-behavior: smooth;
+}
+
+* {
+  font-family: "Poppins";
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: rgb(238, 174, 202);
+  background: radial-gradient(
+    circle,
+    rgba(238, 174, 202, 1) 0%,
+    rgba(148, 187, 233, 1) 100%
+  );
+}
+/*custom scrollbar*/
+::-webkit-scrollbar {
+  width: 6px;
+  background: #acb7e1;
+}
+::-webkit-scrollbar-thumb {
+  background: #4577af;
+  border-radius: 10px;
+}
+.flex-row {
+  display: flex;
+  flex-direction: row;
+}
+
+.shape {
+  opacity: 60%;
+  position: absolute;
+  z-index: -1;
+  height: 10rem;
+  width: 10rem;
+}
+
+.wave {
+  animation-name: wave-animation; /* Refers to the name of your @keyframes element below */
+  animation-duration: 2.5s; /* Change to speed up or slow down */
+  animation-iteration-count: infinite; /* Never stop waving :) */
+  transform-origin: 70% 70%; /* Pivot around the bottom-left palm */
+  display: inline-block;
+}
+
+@keyframes wave-animation {
+  0% {
+    transform: rotate(0deg);
+  }
+  10% {
+    transform: rotate(14deg);
+  } /* The following five values can be played with to make the waving more or less extreme */
+  20% {
+    transform: rotate(-8deg);
+  }
+  30% {
+    transform: rotate(14deg);
+  }
+  40% {
+    transform: rotate(-4deg);
+  }
+  50% {
+    transform: rotate(10deg);
+  }
+  60% {
+    transform: rotate(0deg);
+  } /* Reset for the last half to pause */
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+.img img {
+  max-width: 400px;
+  /* animation: animate 5s linear infinite; */
+}
+
+@media only screen and (max-width: 1100px) {
+  .img img {
+    display: none;
+  }
+}
+
+/* @keyframes animate {
+    0%,100%{
+        transform: translateY(50px);
+    }
+    50%{
+        transform: translateY(100px);
+    }
+} */
+
+section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 50px;
+}
+
+@media (max-width: 900px) {
+  section {
+    padding: 50px 10px 10px;
+  }
+}
+
+.container {
+  position: relative;
+  width: calc(100% - 100px);
+  min-height: calc(100vh - 280px);
+  min-height: 300px;
+  background: rgba(255, 255, 255, 0.5);
+  box-shadow: 0 0 1rem 0 rgba(0, 0, 0, 0.05);
+  border-radius: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 50px;
+  margin-top: 60px;
+}
+
+@media (max-width: 1100px) {
+  .container {
+    position: relative;
+    width: calc(100% - 20px);
+  }
+}
+
+@media (max-width: 900px) {
+  .container {
+    flex-direction: column;
+    margin-top: 120px;
+    height: auto;
+    padding: 10px;
+    width: calc(100% - 75px);
+  }
+}
+
+@media (max-width: 380px) {
+  .container {
+    flex-direction: column;
+    margin-top: 80px;
+    height: auto;
+    padding: 10px;
+    width: calc(100% - 0px);
+  }
+}
+
+@supports (-webkit-backdrop-filter: none) or (backdrop-filter: none) {
+  header {
+    position: fixed;
+    top: 10px;
+    /* right: 20px;
+    left: 20px; */
+    padding: 20px 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.4);
+    box-shadow: 0 0 1rem 0 rgba(0, 0, 0, 0.05);
+    border-radius: 1rem;
+    backdrop-filter: blur(1rem);
+    -webkit-backdrop-filter: blur(1rem);
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    border-top: 1px solid rgba(255, 255, 255, 0.5);
+    border-left: 1px solid rgba(255, 255, 255, 0.5);
+    z-index: 90;
+    width: calc(100% - 180px);
+  }
+
+  @media (max-width: 900px) {
+    header {
+      position: fixed;
+      top: 10px;
+      /* top: -0px; */
+      /* right: 0px;
+      left: 0px; */
+      /* width: 100%; */
+      width: calc(100% - 80px);
+      flex-direction: column;
+      padding: 20px;
+    }
+    header ul {
+      margin-top: 10px;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    header ul li {
+      margin: 2px;
+    }
+
+    header ul li a {
+      display: inline-block;
+    }
+  }
+}
+@media (max-width: 380px) {
+  header {
+    position: relative;
+    top: -120px;
+    right: 0px;
+    left: 0px;
+    width: 100%;
+    flex-direction: column;
+    padding: 20px;
+  }
+}
+
+@supports not ((-webkit-backdrop-filter: none) or (backdrop-filter: none)) {
+  header {
+    position: absolute;
+    top: -40px;
+    right: 20px;
+    left: 20px;
+    padding: 20px 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.7);
+    opacity: 0.9;
+    box-shadow: 0 0 1rem 0 rgba(0, 0, 0, 0.05);
+    border-radius: 1rem;
+    backdrop-filter: blur(1rem);
+    -webkit-backdrop-filter: blur(1rem);
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    border-top: 1px solid rgba(255, 255, 255, 0.5);
+    border-left: 1px solid rgba(255, 255, 255, 0.5);
+  }
+
+  @media (max-width: 900px) {
+    header {
+      position: relative;
+      top: -60px;
+      right: 0px;
+      left: 0px;
+      width: 100%;
+      flex-direction: column;
+      padding: 20px;
+    }
+    header ul {
+      margin-top: 10px;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    header ul li {
+      margin: 2px;
+    }
+
+    header ul li a {
+      display: inline-block;
+    }
+  }
+}
+
+header .logo {
+  color: black;
+  font-weight: 700;
+  text-decoration: none;
+  font-size: 2rem;
+}
+
+header ul {
+  display: flex;
+}
+
+header ul li {
+  list-style: none;
+  margin: 0 10px;
+}
+
+header ul li a {
+  text-decoration: none;
+  font-weight: 500;
+  color: black;
+  padding: 8px 15px;
+  border-radius: 1rem;
+  transition: 500ms ease;
+}
+
+header ul li a:hover,
+header ul li a.active {
+  background: hsla(0, 0%, 100%, 1);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+}
+
+.content {
+  display: flex;
+  z-index: 1;
+  margin-top: 50px;
+  align-items: center;
+}
+
+@media (max-width: 900px) {
+  .content {
+    flex-direction: column;
+    transform: translateX(0px);
+    max-width: 100%;
+    margin-top: 10px;
+  }
+}
+@media (max-width: 500px) {
+  .content {
+    flex-direction: column;
+    transform: translateX(0px);
+    max-width: 100%;
+    margin-top: 10px;
+  }
+}
+@media (max-width: 440px) {
+  .content {
+    flex-direction: column;
+    transform: translateX(0px);
+    max-width: 100%;
+    margin-top: 50px;
+  }
+}
+@media (max-width: 380px) {
+  .content {
+    flex-direction: column;
+    transform: translateX(0px);
+    max-width: 100%;
+    margin-top: -60px;
+  }
+}
+
+.column {
+  box-shadow: 0 0 1rem 0 rgba(0, 0, 0, 0.05);
+  border-radius: 1rem;
+  backdrop-filter: blur(1rem);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  border-top: 1px solid rgba(255, 255, 255, 0.5);
+  border-left: 1px solid rgba(255, 255, 255, 0.5);
+  padding: 40px;
+}
+
+.column-2 {
+  box-shadow: 0 0 1rem 0 rgba(0, 0, 0, 0.05);
+  border-radius: 1rem;
+  backdrop-filter: blur(1rem);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  border-top: 1px solid rgba(255, 255, 255, 0.5);
+  border-left: 1px solid rgba(255, 255, 255, 0.5);
+  padding: 40px;
+  margin-inline: 50px;
+  margin-right: 0px;
+}
+
+.column h2 {
+  font-size: 3rem;
+  color: black;
+}
+.column-2 h2 {
+  font-size: 3rem;
+  color: black;
+}
+
+.column h3 {
+  font-size: 1.5rem;
+}
+
+.column p {
+  font-size: 1.5rem;
+  color: black;
+  line-height: 2.25rem;
+}
+.column a {
+  display: inline-block;
+  padding: 0.9rem 1.8rem;
+  color: black;
+  margin-top: 20px;
+  margin-right: 10px;
+  border-radius: 30px;
+  font-size: 1.2rem;
+  font-weight: 500;
+  text-decoration: none;
+  background: hsla(0, 0%, 100%, 0.25);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.05);
+  transition: 500ms ease;
+}
+
+.column a:hover {
+  background: rgba(255, 255, 255, 0.5);
+  box-shadow: 0 5px 10px rgba(255, 255, 255, 0.05);
+}
+
+.column p .column-p {
+  font-size: 1rem;
+}
+
+.fa-github {
+  color: #333;
+}
+
+.fa-linkedin {
+  color: #0077b5;
+}
+
+.fa-facebook {
+  color: #1877f2;
+}
+
+.fa-instagram {
+  color: #e1306c;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 30% 70%;
+  margin-top: 5;
+  padding-top: 4rem;
+}
+
+.dev-icons ul {
+  padding-left: 0;
+  list-style: none;
+  font-size: 3rem;
+  margin-bottom: 0;
+  margin-top: 0;
+  text-align: center;
+}
+
+.software-skill-inline {
+  display: inline-block;
+  margin-right: 20px;
+  margin-bottom: 20px;
+}
+
+.software-skill-inline p {
+  color: #868e96;
+  font-size: 10px;
+}
+
+.software-skill-inline i:hover p {
+  color: #645beb;
+}
+
+.c i {
+  color: #868e96;
+}
+
+.c i:hover {
+  color: #03599c;
+}
+
+.cplusplus i {
+  color: #868e96;
+}
+
+.cplusplus i:hover {
+  color: #9c033a;
+}
+
+.html5 i {
+  color: #868e96;
+}
+
+.html5 i:hover {
+  color: #e54d26;
+}
+
+.css3 i {
+  color: #868e96;
+}
+
+.css3 i:hover {
+  color: #3d8fc6;
+}
+
+.javascript i {
+  color: #868e96;
+}
+
+.javascript i:hover {
+  color: #f0db4f;
+}
+
+.python i {
+  color: #868e96;
+}
+
+.python i:hover {
+  color: #ffd845;
+}
+
+.flask i {
+  color: #868e96;
+}
+
+.flask i:hover {
+  color: #010101;
+}
+
+.linux i {
+  color: #868e96;
+}
+
+.linux i:hover {
+  color: #000;
+}
