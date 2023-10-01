@@ -6,13 +6,13 @@
 
     <!-- <link rel="stylesheet" href="../css/all.min.css" /> -->
     <link rel="stylesheet" href="../css/style.css" />
-    <script defer src="./assets/js/all.js"></script>
+    <script defer src="../js/script.js"></script>
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css"
     />
     <script src="https://code.iconify.design/2/2.0.4/iconify.min.js"></script>
-    <script src="./assets/js/repo-card.js"></script>
+    <script src="../js/repo_div.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <!-- Animation -->
     <link
@@ -56,9 +56,12 @@
           <div class="column">
             <h2>Hi all, I'm Aaditya <span class="wave">👋</span></h2>
             <p>
-              I love software development, Web developing. I know a little bit
-              of React! Want to discuss regarding any project or just want to
-              say a Hi? I am always available to listen you :)
+              <span>
+                I love Web developing. <br />
+                I know a little bit of React! Want to discuss regarding any
+                project or just want to say a Hi? I am always available to
+                listen you :)
+              </span>
             </p>
             <a href="#home" data-aos-duration="1000">Contact Me</a>
             <a href="#home" data-aos-duration="1000">Resume</a>
@@ -74,30 +77,6 @@
           style="justify-content: space-around"
         >
           <div class="column-2">
-            <svg
-              xmlns="//www.w3.org/2000/svg"
-              version="1.1"
-              class="svg-filters"
-              style="display: none"
-            >
-              <defs>
-                <filter id="marker-shape">
-                  <feTurbulence
-                    type="fractalNoise"
-                    baseFrequency="0 0.15"
-                    numOctaves="1"
-                    result="warp"
-                  />
-                  <feDisplacementMap
-                    xChannelSelector="R"
-                    yChannelSelector="G"
-                    scale="30"
-                    in="SourceGraphic"
-                    in2="warp"
-                  />
-                </filter>
-              </defs>
-            </svg>
             <h2 style="font-weight: 550">
               <span class="low-highlight-pink">What I do</span>
             </h2>
@@ -154,7 +133,7 @@
               <div
                 class="experience-blurred_div"
                 style="
-                  background-image: url('../images/lnxct.png');
+                  background-image: url('../images/lnxctlogo.png');
                   background-size: 190px;
                   background-repeat: no-repeat;
                   background-position: center;
@@ -179,7 +158,20 @@
                 existing codebase.
               </p>
             </div>
-          </div>  
+          </div>
+        </div>
+
+        <!-- 4th Section -->
+        <h2
+          id="projects"
+          class="mob-h2 page-scroll"
+          style="font-size: 56px; font-weight: 700; margin-top: 50px"
+        >
+          <span class="low-highlight-cyan">Projects</span>
+        </h2>
+        <div class="projects">
+          <div class="repo-card" data-repo="Aaditya110711/MyPortfollio"></div>
+          <div class="repo-card" data-repo="Aaditya110711/VideoDownloader"></div>
         </div>
       </div>
     </section>

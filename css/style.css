@@ -558,21 +558,10 @@ header ul li a.active {
 .software-skill-inline i:hover p {
   color: #645beb;
 }
-
-.c i {
-  color: #868e96;
-}
-
-.c i:hover {
-  color: #03599c;
-}
-
-.cplusplus i {
-  color: #868e96;
-}
-
-.cplusplus i:hover {
-  color: #9c033a;
+.low-highlight-pink {
+  letter-spacing: 2px;
+  padding: 0 5px;
+  background: linear-gradient(to bottom, transparent 50%, #ff6db7 50%);
 }
 
 .html5 i {
@@ -779,4 +768,36 @@ header ul li a.active {
 
 .experience-text-desc {
   text-align: justify;
+}
+
+
+.projects {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem 1rem;
+  margin-top: 25px;
+}
+
+.repo-card {
+  box-shadow: 0 0 1rem 0 rgba(0, 0, 0, 0.05);
+  border-radius: 1rem;
+  backdrop-filter: blur(1rem);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  border-top: 1px solid rgba(255, 255, 255, 0.5);
+  border-left: 1px solid rgba(255, 255, 255, 0.5);
+  transition: 0.5s ease;
+}
+
+.repo-card,
+.repo-card-dark {
+  position: relative;
+  box-shadow: 0 10px 30px -15px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+}
+
+.repo-card:hover {
+  box-shadow: 0 20px 30px -10px rgba(0, 0, 0, 0.2);
+  background: rgba(255, 255, 255, 0.5);
 }
